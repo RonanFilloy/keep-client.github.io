@@ -38,7 +38,7 @@ function CreateNote() {
             archived: false,
             tags: newTags
         }
-        fetch('/notes', {
+        fetch('https://keep-server-x6uo.onrender.com/notes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
