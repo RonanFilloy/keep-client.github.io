@@ -17,7 +17,7 @@ function NoteList() {
 
     useEffect(
         function fetchNotes() {
-            fetch('/notes', {method: 'GET'})
+            fetch('https://keep-server-x6uo.onrender.com/notes', {method: 'GET'})
                 .then(response => response.json())
                 .then(data => {
                     data.sort((a, b) => a.title.localeCompare(b.title));

@@ -24,7 +24,7 @@ function FullNote(props) {
         dispatch({type: 'EDIT', id: id, title: noteTitle, content: noteContent});
         toggleOpen();
         try {
-            const response = await fetch(`/notes/${id}/edit`, {
+            const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${id}/edit`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -48,7 +48,7 @@ function FullNote(props) {
         setRefresh(true);
         toggleOpen();
         try {
-            const response = await fetch(`/notes/${id}/archive`, {
+            const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${id}/archive`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -69,7 +69,7 @@ function FullNote(props) {
         dispatch({ type: 'CHANGE TAGS', id: id, newTags: [...tags, newTag] });
         setRefresh(true);
         try {
-            const response = await fetch(`/notes/${id}/tags`, {
+            const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${id}/tags`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -92,7 +92,7 @@ function FullNote(props) {
         dispatch({type: 'CHANGE TAGS', id: id, newTags: updatedTags});
         setRefresh(true);
         try {
-            const response = await fetch(`/notes/${props.id}/tags`, {
+            const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${props.id}/tags`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -113,7 +113,7 @@ function FullNote(props) {
         dispatch({type: 'DELETE', id: id});
         setCurrFilter('All');
         try {
-            const response = await fetch(`/notes/${id}`, {method: 'DELETE'});
+            const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${id}`, {method: 'DELETE'});
             if(!response.ok) {
                 throw new Error('failed to delete note');
             }
