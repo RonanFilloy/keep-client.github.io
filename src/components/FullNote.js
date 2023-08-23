@@ -23,6 +23,7 @@ function FullNote(props) {
     const handleEdit = async () => {
         dispatch({type: 'EDIT', id: id, title: noteTitle, content: noteContent});
         toggleOpen();
+        setRefresh(true);
         try {
             const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${id}/edit`, {
                 method: 'PATCH',
@@ -112,6 +113,7 @@ function FullNote(props) {
     const handleDeleteNote = async () => {
         dispatch({type: 'DELETE', id: id});
         setCurrFilter('All');
+        setRefresh(true);
         try {
             const response = await fetch(`https://keep-server-x6uo.onrender.com/notes/${id}`, {method: 'DELETE'});
             if(!response.ok) {

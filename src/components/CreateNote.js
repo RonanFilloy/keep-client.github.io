@@ -56,7 +56,7 @@ function CreateNote(props) {
             })
             .finally(() => {
                 resetValues();
-                setRefresh();
+                setRefresh(true);
             })
     }
 
