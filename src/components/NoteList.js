@@ -54,7 +54,7 @@ function NoteList() {
     return (
         <div className='container'>
             <div className='row'>
-                <CreateNote />
+                <CreateNote setRefresh={setRefresh} />
                 <FormControl fullWidth>
                     <h6>Filter by:</h6>
                     <Select

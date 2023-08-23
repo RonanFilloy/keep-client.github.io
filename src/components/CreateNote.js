@@ -4,7 +4,9 @@ import useString from '../hooks/useString';
 import { TextField } from '@mui/material';
 import '../styles/CreateNote.css';
 
-function CreateNote() {
+function CreateNote(props) {
+    const {setRefresh} = props;
+
     const [newTags, setNewTags] = useState([]);
 
     const [newTitle, changeTitle] = useString('');
@@ -54,6 +56,7 @@ function CreateNote() {
             })
             .finally(() => {
                 resetValues();
+                setRefresh();
             })
     }
 
