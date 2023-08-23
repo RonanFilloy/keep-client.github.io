@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/keep-client.github.io/static/css/main.b81b06ea.css",
-    "main.js": "/keep-client.github.io/static/js/main.d672565a.js",
+    "main.js": "/keep-client.github.io/static/js/main.b7977961.js",
     "index.html": "/keep-client.github.io/index.html",
     "main.b81b06ea.css.map": "/keep-client.github.io/static/css/main.b81b06ea.css.map",
-    "main.d672565a.js.map": "/keep-client.github.io/static/js/main.d672565a.js.map"
+    "main.b7977961.js.map": "/keep-client.github.io/static/js/main.b7977961.js.map"
   },
   "entrypoints": [
     "static/css/main.b81b06ea.css",
-    "static/js/main.d672565a.js"
+    "static/js/main.b7977961.js"
   ]
 }
